@@ -185,7 +185,13 @@ let AddTodo = ({ dispatch }) => {
     <div className="add-todo">
       <input ref={node => {
         input = node;
-      }} className="add-todo__input" placeholder="new todo"/>
+      }} className="add-todo__input" placeholder="new todo" onKeyUp={(e) => {
+    // submit value when pressing Enter key
+    if (e.keyCode == 13){
+      dispatch(addTodo(input.value));
+      input.value = '';
+    }
+  }}/>
       <button onClick={() => {
         dispatch(addTodo(input.value));
         input.value = '';
