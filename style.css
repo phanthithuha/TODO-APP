@@ -60,6 +60,7 @@ body{
   margin: 2px 0 1px;
 }
 .add-todo__button{
+  outline: none;
   position: absolute;
   display: inline-block;
   width: 60px;
@@ -75,7 +76,7 @@ body{
   background-image: url('https://jsbin-user-assets.s3.amazonaws.com/GarthDB/add.svg');
 }
 // no border when click on NEW TODO BUTTON
-.add-todo__button:focus{
+.add-todo__button:focus {
   outline: none;
 }
 .add-todo__input {
@@ -90,4 +91,14 @@ body{
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 600;
+}
+.add-todo__input:focus {
+  outline: none;
+  background: rgba(0,0,0,0.05);
+}
+.add-todo__input::placeholder{
+  color: #b3b3b3;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 1;
 }
